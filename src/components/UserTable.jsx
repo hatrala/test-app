@@ -3,11 +3,14 @@ import UserPropsRow from './UserPropsRow'
 import UserTableBody from './UserTableBody'
 
 export class UserTable extends Component {
+    constructor(props) {
+        super(props)
+    }
   render() {
     return (
         <table>
             <UserPropsRow/>
-            <UserTableBody/>
+            <UserTableBody userList = {this.props.userList}/>
         </table>
     )
   }

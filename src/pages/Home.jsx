@@ -9,6 +9,7 @@ import "../App.css";
 import UserTableBody from "../components/UserTableBody";
 import Axios from "axios"
 import { ApiUrl } from "../config/config";
+import UserTable from "../components/UserTable";
 
 
 export class Home extends React.Component {
@@ -41,10 +42,8 @@ export class Home extends React.Component {
             <div>
                 <Clock isOn = {this.state.status}/>
                 <Toggle onStatusChange = {this.handleStatus} isToggleOn = {this.state.status}/>
-                <table>
-                    <UserPropsRow/>
-                    <UserTableBody userList = {this.state.user}/>
-                </table>
+                <UserTable userList = {this.state.user}/>
+                <NameForm />
             </div>
         )
     }
